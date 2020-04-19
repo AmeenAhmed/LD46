@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LD46</title>
+        <link rel="stylesheet" href="main.css"/>
+        <script type="text/javascript" src="lodash.min.js"></script>
+        <script type="text/javascript" src="constants.js"></script>
+        <script type="text/javascript" src="utils.js"></script>
+        <script type="text/javascript" src="card.js"></script>
+        <script type="text/javascript" src="game.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+    </head>
+    <body>
+        <audio id="audio-click" preload="auto">
+            <source src="click.wav" type="audio/wav">
+        </audio>
+        <audio id="audio-hit" preload="auto">
+            <source src="hit.wav" type="audio/wav">
+        </audio>
+        <div id="game" class="game noselect">
+            <div class="character-select" id="character-select">
+                <div class="logo">Survive the dungeon</div>
+                <div class="title">Pick your character</div>
+                <div class="card card-option" x-char="paladin" style="background-image: url(card.png)">
+                    <div class="img" style="background-image: url(paladin.png)"></div>
+                    <div class="name text-shadow">Paladin</div>
+                    <div class="text text-shadow"></div>
+                    <div id="health" class="health text-shadow">30</div>
+                    <div id="attack" class="attack text-shadow">3</div>
+                </div>
+                <div class="card card-option" x-char="wizard" style="background-image: url(card.png)">
+                    <div class="img" style="background-image: url(wizard.png)"></div>
+                    <div class="name text-shadow">Wizard</div>
+                    <div class="text text-shadow"></div>
+                    <div id="health" class="health text-shadow">30</div>
+                    <div id="attack" class="attack text-shadow">3</div>
+                </div>
+            </div>
+            <div id="game-over" class="game-over hidden">
+                Game over!!
+                <br/>
+                <br/>
+                <br/>
+                Thanks for playing!!
+            </div>
+            <div id="board" class="board hidden">
+                <div class="active-row" id="active-row">
+
+                </div>
+                <div class="items" id="items">
+                </div>
+                <div class="player" id="player">
+                    <div class="stats" id="stats">
+                        <div class="level">Level <span id="level-num">1</span></div>
+                        <div class="xp" id="xp">
+                            <div class="xp-bar" id="xp-bar"></div>
+                        </div>
+                        <div class="xp-num" id="xp-num">0 / 5</div>
+                    </div>
+                </div>
+                <div class="msgs" id="msgs">
+                    <div class="title text-shadow">messages</div>
+                    <div class="body">
+                        
+                    </div>
+                </div>
+                <div class="inventory" id="inventory">
+                    <div class="title text-shadow">Inventory </div>
+                    <div class="sub-title">
+                        (double click to remove items)
+                    </div>
+                    <div class="body">
+                        <div class="slot" x-idx="0"></div>
+                        <div class="slot" x-idx="1"></div>
+                        <div class="slot" x-idx="2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/template">
+        </script>
+    </body>
+</html>
